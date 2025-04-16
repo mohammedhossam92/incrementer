@@ -254,7 +254,7 @@ export default function CounterApp() {
         .decrement-half-btn { background: #FB7185; }
         .reset-btn { background: #F59E0B; }
         
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
           .counter-app { padding: 0.1rem; }
           .table-container {
             overflow-x: auto;
