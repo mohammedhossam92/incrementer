@@ -1,0 +1,20 @@
+/pages
+  /api
+    /auth
+      signin.js
+      signup.js
+    /counter
+      index.js
+      [category].js
+  /auth
+    signin.js
+    signup.js
+  /dashboard.js
+/components
+  CounterApp.js
+  ThemeToggle.js
+/utils
+  auth.js
+  file.js
+/data
+  (user .txt files will be stored here)
