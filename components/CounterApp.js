@@ -261,7 +261,22 @@ export default function CounterApp() {
             border-radius: 8px;
             border: 1px solid var(--border);
           }
+        @media (max-width: 354px) {
+          .counter-app { padding: 5px;
+          }
+
+          .table-container {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+          }
+            button {
+          padding: 0.5rem 0.5rem;
         }
+          .colorful-table{
+            width:100%;
+          }
+      }
       `}</style>
     </div>
   );
