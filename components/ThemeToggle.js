@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  // Destructure resolvedTheme to know the *actual* applied theme (handles 'system')
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  // Only destructure what you're actually using
+  const { setTheme, resolvedTheme } = useTheme();
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -16,9 +16,6 @@ export default function ThemeToggle() {
   if (!mounted) {
     return null;
   }
-
-  // Remove the nested ThemeToggle function as it's not needed
-  // and replace the toggleTheme reference with an inline function
 
   return (
     <button
