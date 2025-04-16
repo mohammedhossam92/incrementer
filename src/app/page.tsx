@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CounterApp from '../../components/CounterApp';
 
 export default function Home() {

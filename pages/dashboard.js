@@ -10,7 +10,7 @@ export default function Dashboard() {
     if (!localStorage.getItem('token')) {
       router.push('/auth/signin');
     }
-  }, []);
+  }, [router]);
   return (
     <div>
       <CounterApp />

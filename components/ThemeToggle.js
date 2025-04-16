@@ -17,14 +17,12 @@ export default function ThemeToggle() {
     return null;
   }
 
-  const toggleTheme = () => {
-    // Toggle between light and dark based on the currently resolved theme
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-  };
+  // Remove the nested ThemeToggle function as it's not needed
+  // and replace the toggleTheme reference with an inline function
 
   return (
     <button
-      onClick={toggleTheme}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       className="theme-toggle-btn" // Ensure this class exists in your CSS
       aria-label="Toggle Dark Mode"
     >
