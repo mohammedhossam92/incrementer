@@ -29,7 +29,7 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    const data = JSON.parse(fs.readFileSync(userFile, 'utf8'));
+    // const data = JSON.parse(fs.readFileSync(userFile, 'utf8')); // Remove this line if not used
     const { categories } = req.body;
     fs.writeFileSync(userFile, JSON.stringify(categories, null, 2));
     return res.status(200).json({ message: 'Saved' });
