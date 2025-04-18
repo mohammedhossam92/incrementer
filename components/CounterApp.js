@@ -136,7 +136,7 @@ export default function CounterApp() {
       <div className="value-label">
         {selected && (
           <span>
-            Current Value for <span className="highlight-text">{selected}</span> : 
+            Current Value for <br></br><span className="highlight-text">{selected}</span> : 
             <span className="value-number">{categories[selected]?.value || 0}</span>
           </span>
         )}
@@ -167,7 +167,7 @@ export default function CounterApp() {
       </div>
       <style jsx>{`
         .counter-app { 
-          max-width: 700px; 
+          max-width: 800px; 
           margin: 2rem auto; 
           padding: 2rem; 
           background: var(--bg); 
@@ -181,6 +181,19 @@ export default function CounterApp() {
           gap: 0.5rem; 
           margin-bottom: 1rem; 
         }
+
+        .colorful-select{
+            text-align: center;
+    color: #ffffff;
+    background-color: #6d519b94;
+    border-radius: 12px;
+    width: 90%;
+    margin: 10px auto;
+    padding: .5rem;
+    display: block;
+        }
+
+
         
         /* Updated button styles with increased padding and rounded borders */
         button {
@@ -271,11 +284,28 @@ export default function CounterApp() {
             border: 1px solid var(--border);
           }
             button {
-          padding: 0.5rem 0.5rem;
+          padding: 0.4rem 0.4rem;
+          font-weight: 300;
+          font-size:12px;
         }
           .colorful-table{
             width:100%;
           }
+          th {
+          background: linear-gradient(135deg, #6366F1, #8B5CF6);
+          color: white;
+          padding: .7rem;
+          font-weight: 300;
+        }
+        td {
+          padding: 0.6rem;
+          border-bottom: 1px solid var(--border);
+        }
+        .value-cell {
+          font-weight: normal;
+          color: #6366F1;
+          font-size:12px;
+        }
       }
       `}</style>
     </div>
